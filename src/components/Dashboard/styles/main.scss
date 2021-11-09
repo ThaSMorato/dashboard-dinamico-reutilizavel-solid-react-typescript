@@ -1,13 +1,6 @@
-// LAYOUTS -------------------------------------
-@import './layouts/dashboard';
-@import './layouts/widget';
+@import "./layouts/dashboard";
+@import "./layouts/widget";
 
-// POSITIONS -------------------------------------
-@import './position/full';
-@import './position/half';
-@import './position/quarter';
-
-// TEMPLATES -------------------------------------
-@import './templates/list';
-@import './templates/block';
-@import './templates/bar-chart';
+@import "./templates/bar-chart";
+@import "./templates/block";
+@import "./templates/list";

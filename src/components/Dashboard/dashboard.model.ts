@@ -1,8 +1,4 @@
-import {
-  WidgetPosition,
-  WidgetTemplate,
-  WidgetType,
-} from "src/components/Dashboard/dashboard.config";
+import { WidgetPosition, WidgetTemplate, WidgetType } from "./dashboard.config";
 
 export interface List {
   title: string;
@@ -37,6 +33,6 @@ export interface WidgetComponentProps {
   content: Widgets;
 }
 
-export interface WidgetTemplateConfig {
-  [template: string]: React.FC<WidgetComponentProps>;
+export interface WisgetTemplateConfig {
+  [templates: string]: React.FC<WidgetComponentProps>;
 }

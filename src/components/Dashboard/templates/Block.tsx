@@ -1,19 +1,16 @@
 import React from 'react';
-import {WidgetComponentProps} from 'src/components/Dashboard/dashboard.model';
+import {WidgetComponentProps} from '../dashboard.model';
+// import { Container } from './styles';
 
 export const BlockTemplate = ({content}: WidgetComponentProps) => {
-	const prev = content.data.prev;
-	const currentParam = content.data.current;
-	const title = content.data.title;
-	const value = content.data.value;
+	const {title, current, prev, value} = content.data;
 
-	const handleInfo = () => (prev ? `${prev} - ${currentParam}` : currentParam);
-
+	const handleInfo = () => (prev ? `${prev} - ${current}` : current);
 	return (
-		<div className="widget__block">
+		<>
 			<h2 className="widget__title">{title}</h2>
 			<p className="widget__value">{value}</p>
 			<p className="widget__info">{handleInfo()}</p>
-		</div>
+		</>
 	);
 };

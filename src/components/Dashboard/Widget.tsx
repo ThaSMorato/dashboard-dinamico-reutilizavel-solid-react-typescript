@@ -1,6 +1,5 @@
-import React from 'react';
-import {templateComponents} from 'src/components/Dashboard/dashboard.config';
 import {Widgets} from 'src/components/Dashboard/dashboard.model';
+import {templateComponent} from './dashboard.config';
 
 export interface WidgetProps {
 	content: Widgets;
@@ -8,10 +7,9 @@ export interface WidgetProps {
 }
 
 export const Widget = ({content, className}: WidgetProps) => {
-	const WidgetComponent = templateComponents[content.config.template];
-	const customClass = className && `${className} `;
+	const customClass = className && ` ${className} `;
 	const position = content.config.position.toLowerCase();
-
+	const WidgetComponent = templateComponent[content.config.template];
 	return (
 		<div className={`${customClass}widget widget--${position}`}>
 			<WidgetComponent content={content} />
